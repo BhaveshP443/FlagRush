@@ -1,7 +1,4 @@
-Perfect 👍
-Here is the **clean, final `README.md` code** exactly as you should paste it into **VS Code**.
 
----
 
 ````md
 # 🚩 FlagRush
@@ -145,10 +142,5 @@ All contributions are reviewed before merging.
 
 ---
 
-## 📄 License
-
-This project is open-source and available under the **MIT License**.
-
-```
 
 
