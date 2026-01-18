@@ -1,0 +1,107 @@
+/* FriendCard.css */
+.friend-card {
+  background: var(--bg-glass);
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-bounce);
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.friend-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.friend-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+    linear-gradient(135deg, var(--primary), var(--accent), var(--secondary))
+      border-box;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+.friend-avatar:hover {
+  transform: scale(1.05);
+}
+
+.friend-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.chat-btn {
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--text-primary);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.chat-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .friend-card {
+    width: 200px;
+    padding: 1.5rem;
+  }
+
+  .friend-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .friend-name {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .friend-card {
+    width: 160px;
+    padding: 1.2rem;
+    border-radius: 1rem;
+  }
+
+  .friend-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .chat-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

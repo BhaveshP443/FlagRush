@@ -1,0 +1,140 @@
+/* FriendRequest.css */
+.friend-request-card {
+  background: var(--bg-glass);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-bounce);
+  max-width: 320px;
+  width: 100%;
+}
+
+.friend-request-card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: var(--shadow-glow); */
+}
+
+.request-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.request-header::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent-pink));
+}
+
+.request-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+    linear-gradient(135deg, var(--primary), var(--accent), var(--secondary))
+      border-box;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+.request-avatar:hover {
+  transform: scale(1.05);
+}
+
+.request-title {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.request-username {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+.request-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.request-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.request-btn.accept {
+  background: linear-gradient(135deg, var(--success), var(--success-dark));
+  color: var(--text-primary);
+}
+
+.request-btn.decline {
+  background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+  color: var(--text-primary);
+}
+
+.request-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.request-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .friend-request-card {
+    padding: 1.5rem;
+    max-width: 280px;
+  }
+
+  .request-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .request-username {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .friend-request-card {
+    padding: 1.2rem;
+    border-radius: 1rem;
+  }
+
+  .request-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .request-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
